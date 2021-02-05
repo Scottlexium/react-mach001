@@ -1,11 +1,17 @@
 import React from "react";
 import "./style.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <div>
-      <h1>Welcome to Mach001!</h1>
-      <p>Starting prototype Mach001 :)</p>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" />
+        </Switch>
+      </Router>
+    </>
   );
 }
